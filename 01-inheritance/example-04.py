@@ -8,7 +8,6 @@ class Output:
     def to_json(self):
         return json.dumps(self)
 
-
 class SimpleRow(dict, Output):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
