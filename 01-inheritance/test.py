@@ -49,3 +49,36 @@ class TestAccount(unittest.TestCase):
     def test_check_balance(self):
         account = Account("1234567", "Udoka", 2000)
         self.assertEqual(account.check_balance(), f"Account balance: ${account.balance}")
+
+
+
+##############################################################################################
+
+class TestAccountMethods(unittest.TestCase):
+    def setUp(self):
+        self.customer = Customer("Tolulope Ademilua", "123 Tallinn, Tallinn")
+        self.account = Account("123456", self.customer)
+
+    def test_initial_balance(self):
+        self.assertEqual(self.account.balance, 0.0)
+
+    def test_deposit(self):
+        self.account.deposit(1000)
+        self.assertEqual(self.account.balance, 1000.0)
+
+    def test_withdraw_valid_amount(self):
+        self.account.deposit(1000)
+        self.account.withdraw(200)
+        self.assertEqual(self.account.balance, 800.0)
+
+    def test_withdraw_invalid_amount(self):
+        self.account.deposit(1000)
+        self.account.withdraw(1200)
+        self.assertEqual(self.account.balance, 1000.0)  # Balance should remain unchanged
+
+    def test_check_balance(self):
+        self.account.deposit(1000)
+        self.assertEqual(self.account.check_balance(), "Account balance: $1000.00")
+
+if __name__ == '__main__':
+    unittest.main()

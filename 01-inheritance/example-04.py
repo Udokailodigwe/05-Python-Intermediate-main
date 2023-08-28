@@ -16,6 +16,7 @@ class SimpleRow(dict, Output):
     def _headers(self):
         header_width = max(len(str(k)) for k in self)
         header_v = (str(k).center(header_width) for k in self)
+        print("this is header_v:", *header_v)
         headers = " | ".join(header_v)
         return f"| {headers} |"
 

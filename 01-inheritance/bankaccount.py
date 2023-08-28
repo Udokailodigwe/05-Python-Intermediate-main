@@ -23,24 +23,24 @@ class Account:
         # pls put the logic to increment the balance here based on the amount added
         if amount > 0:
             self.balance += amount
-            print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
+            #print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
             return f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}"
         else:
-            print("Invalid deposit amount.")
+            #print("Invalid deposit amount.")
             return "Invalid deposit amount."
 
     def withdraw(self, amount):
         # put the logic to handle the withdrawal here
         if 0 < amount < self.balance:
             self.balance -= amount
-            print(f"Withdrew ${amount:.2f}. New balance: ${self.balance:.2f}")
+            #print(f"Withdrew ${amount:.2f}. New balance: ${self.balance:.2f}")
             return f"Withdrew ${amount:.2f}. New balance: ${self.balance:.2f}"
         else:
-            print("Invalid withdrawal amount or insufficient balance.")
+            #print("Invalid withdrawal amount or insufficient balance.")
             return "Invalid withdrawal amount or insufficient balance."
 
     def check_balance(self):
-        print(f"Account balance: ${self.balance}")
+        #print(f"Account balance: ${self.balance}")
         return f"Account balance: ${self.balance}"
 
 

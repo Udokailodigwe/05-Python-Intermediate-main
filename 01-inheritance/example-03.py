@@ -1,3 +1,5 @@
+#CLASS HIERACHY
+
 class A:
     def __init__(self):
         print(f"A init called")
@@ -13,6 +15,7 @@ class C(B):
     def __init__(self):
         super().__init__()
         print(f"C init called")
+
 
 
 class D(A):
