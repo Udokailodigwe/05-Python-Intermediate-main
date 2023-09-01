@@ -26,7 +26,7 @@ class Dog(Animal):
 
     @property
     def age(self):
-        return f"i {self.my_name} the dog. i and {self.my_age} years old."
+        return f"i am {self.my_age} years old."
 
     #@property
     def make_a_sound(self):
@@ -43,7 +43,7 @@ class Cat(Animal):
 
     @property
     def age(self):
-        return f"i {self.my_name} the cat. and i am {self.my_age} years old."
+        return f"i am {self.my_age} years old."
 
     #@property
     def make_a_sound(self):

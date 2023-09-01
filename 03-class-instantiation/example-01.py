@@ -20,6 +20,14 @@ if __name__ == "__main__":
     s2 = Singleton("B")
     print("C ".ljust(30, "-"))
     s3 = Singleton("C")
+    s4 = Singleton("D")
+    print(s.name)
 
     print(f"They are all the same object: {s is s2 is s3}")
     print(f"Singleton._instance.name: {Singleton._instance.name}")
+
+
+
+
+
+

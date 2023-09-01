@@ -1,3 +1,5 @@
+# This file we get to observe method resolution order(MRO)
+
 class A:
     def __init__(self):
         print("A.__init__")
@@ -44,7 +46,7 @@ class D(B, C):
 
 if __name__ == "__main__":
     d = D()
-    d.func1()
-    d.func2()
-    d.func3()
-    d.super_func3()
+#     d.func1()
+#     d.func2()
+#     d.func3()
+#     d.super_func3()
